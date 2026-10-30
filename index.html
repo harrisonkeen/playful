@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="en" data-hero="laugh" data-name="shrikhand" data-edge="scallop" data-cards="tilt" data-credits="chips" data-frame="pop"
+      data-order="chars" data-chars="pin" data-reel="tv" data-tape="two" data-namefx="lean" data-cursor="sparkle" data-confetti="off"
+      data-sticker="none" data-progress="off" data-copy="on" data-bookme="off" data-doodles="both" data-paper="chars" data-heads="squiggle" data-bands="ends">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harrison Keen — Actor</title>
+<meta name="description" content="Harrison Keen, actor. Showreel, characters and credits.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- MOCKUP: Bagel Fat One, Lilita One and Gluten load only as name-font options. Drop the unused ones per client. -->
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Bagel+Fat+One&family=Lilita+One&family=Gluten:wght@800&family=Figtree:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --hero: #632425;       /* sampled from the hero photo's backdrop, so photo and page meet without a seam */
+    --sun: #ffd23f;        /* name, buttons */
+    --gum: #ff8fab;        /* reel band, squiggles */
+    --paper: #fff5f0;      /* page */
+    --ink: #2b1214;        /* text */
+    --ink-soft: #6b4a4c;   /* secondary text */
+    --gutter: clamp(16px, 5vw, 72px);
+    --text: "Figtree", "Helvetica Neue", Arial, sans-serif;
+    --display: "Shrikhand", "Arial Rounded MT Bold", sans-serif;
+    --display-weight: 400;
+    --spring: cubic-bezier(.34, 1.56, .64, 1);
+  }
+  /* Hero photo B: the smiling teal shot; the dark tone follows the photo */
+  [data-hero="smile"] { --hero: #172a2c; }
+  [data-name="bagel"]  { --display: "Bagel Fat One", sans-serif; }
+  [data-name="lilita"] { --display: "Lilita One", sans-serif; }
+  [data-name="gluten"] { --display: "Gluten", sans-serif; --display-weight: 800; }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { background: var(--paper); color: var(--ink); scroll-behavior: smooth; overflow-x: clip; }
+  body { margin: 0; font: 400 18px/1.6 var(--text); -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
+  .wrap { width: min(100% - 2 * var(--gutter), 1280px); margin-inline: auto; }
+  .display { font-family: var(--display); font-weight: var(--display-weight); line-height: .95; margin: 0; }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 999px;
+    font-weight: 800; text-decoration: none; border: 2px solid var(--ink); background: var(--sun); color: var(--ink);
+    box-shadow: 0 4px 0 var(--ink); transition: transform .25s var(--spring), box-shadow .25s var(--spring);
+  }
+  .pill:hover { transform: translateY(-3px); box-shadow: 0 7px 0 var(--ink); }
+  .pill:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+  .pill.ghost { background: transparent; color: var(--sun); border-color: var(--sun); box-shadow: 0 4px 0 var(--sun); }
+  .pill.ghost:hover { box-shadow: 0 7px 0 var(--sun); }
+  .pill svg { width: 12px; }
+
+  /* ---------- Hero: big name beside the photo, which bleeds off the top, right and bottom ---------- */
+  .hero { position: relative; background: var(--hero); color: var(--sun); min-height: 100svh; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
+  .hero-photo { grid-column: 2; grid-row: 1; position: relative; }
+  .hero-photo img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 22%);
+    mask-image: linear-gradient(to right, transparent, #000 22%);
+  }
+  .hero-photo img + img { display: none; }
+  [data-hero="smile"] .hero-photo img:first-child { display: none; }
+  [data-hero="smile"] .hero-photo img + img { display: block; }
+  .hero-copy { grid-column: 1; grid-row: 1; position: relative; z-index: 2; align-self: center; padding: 64px 0 96px var(--gutter); }
+  .name { white-space: nowrap; margin-right: -12%; }
+  .name .line { display: block; width: max-content; }
+  .name .line + .line { margin-left: .5em; }
+  .name .ch { display: inline-block; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: clamp(28px, 4vw, 48px); }
+
+  /* the hero's end: a scalloped (or zigzag) edge in the next section's colour */
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 22px; z-index: 3; }
+  [data-edge="scallop"] .hero::after { background: radial-gradient(circle at 22px 22px, var(--after-hero, var(--paper)) 21.5px, transparent 22.5px) 0 0 / 44px 22px repeat-x; }
+  [data-edge="zigzag"] .hero::after { background: linear-gradient(135deg, transparent 50%, var(--after-hero, var(--paper)) 50%) 0 0 / 22px 22px repeat-x, linear-gradient(225deg, transparent 50%, var(--after-hero, var(--paper)) 50%) 0 0 / 22px 22px repeat-x; }
+  [data-edge="straight"] .hero::after { height: 10px; background: var(--sun); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    /* the one big moment: the letters of the name hop into place, one after another */
+    .name .ch { animation: hop .7s var(--spring) both; animation-delay: calc(.25s + var(--i) * 45ms); }
+    @keyframes hop { from { opacity: 0; transform: translateY(.6em) rotate(-8deg) scale(.6); } }
+    .hero-photo img { animation: fade 1s ease-out both; }
+    @keyframes fade { from { opacity: 0; } }
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding-block: clamp(72px, 9vw, 128px); }
+  .sec-head { margin-bottom: clamp(32px, 4.5vw, 56px); }
+  .sec-head h2 { font-size: clamp(44px, 6vw, 84px); }
+  /* a hand-drawn squiggle under each heading, in place of a subtitle */
+  .squiggle { display: block; width: 150px; height: 18px; margin-top: 14px; color: var(--gum); }
+
+  /* ---------- Characters: the photo gallery, each look named ---------- */
+  .chars { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 40px) clamp(16px, 2.4vw, 32px); }
+  .char button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; text-align: left; }
+  .char-photo { display: block; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 22px; border: 3px solid var(--ink); background: var(--ink); }
+  .char-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+  .char-name { display: block; margin-top: 14px; font: var(--display-weight) clamp(22px, 2.2vw, 30px)/1.05 var(--display); }
+  .char button { transition: transform .45s var(--spring); }
+  /* A: stickers, each at its own small tilt, that straighten and hop when pointed at */
+  [data-cards="tilt"] .char:nth-child(4n+1) button { transform: rotate(-2.2deg); }
+  [data-cards="tilt"] .char:nth-child(4n+2) button { transform: rotate(1.6deg) translateY(10px); }
+  [data-cards="tilt"] .char:nth-child(4n+3) button { transform: rotate(-1deg); }
+  [data-cards="tilt"] .char:nth-child(4n+4) button { transform: rotate(2.4deg) translateY(6px); }
+  [data-cards="tilt"] .char-photo { box-shadow: 6px 6px 0 var(--gum); }
+  .chars .char button:hover, .chars .char button:focus-visible { transform: rotate(0) translateY(-8px) scale(1.03); }
+  /* B: straight rounded tiles */
+  [data-cards="straight"] .char-photo { box-shadow: none; }
+
+  /* ---------- Reel ---------- */
+  .reel { background: var(--gum); }
+  .reel .squiggle { color: var(--ink); }
+  .reel-body { display: grid; grid-template-columns: 2.2fr 1fr; gap: clamp(24px, 3.5vw, 48px); align-items: center; }
+  .reel-video { position: relative; aspect-ratio: 16 / 9; background: #000; border-radius: 24px; overflow: hidden; border: 3px solid var(--ink); }
+  [data-frame="pop"] .reel-video { box-shadow: 10px 10px 0 var(--ink); }
+  .reel-video video { width: 100%; height: 100%; display: block; object-fit: contain; }
+  .reel-start { position: absolute; inset: 0; border: 0; padding: 0; background: rgba(0, 0, 0, .2); cursor: pointer; display: grid; place-items: center; }
+  .reel-start span {
+    width: clamp(76px, 9vw, 112px); aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center;
+    background: var(--sun); color: var(--ink); border: 3px solid var(--ink); transition: transform .35s var(--spring);
+  }
+  .reel-start svg { width: 30%; margin-left: 8%; }
+  .reel-start:hover span { transform: scale(1.12) rotate(-6deg); }
+  .reel.played .reel-start { display: none; }
+  .pick-label { margin: 0 0 12px; font-weight: 800; }
+  .reel-tabs { display: grid; gap: 14px; }
+  .reel-tabs button {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap; text-align: left; cursor: pointer;
+    position: relative; flex-wrap: nowrap;
+    padding: 14px 18px 14px 14px; border-radius: 20px; background: var(--paper); border: 3px solid var(--ink);
+    transition: transform .3s var(--spring), box-shadow .3s var(--spring);
+  }
+  .reel-tabs button:hover { transform: translateY(-3px); box-shadow: 0 5px 0 var(--ink); }
+  .reel-tabs button[aria-selected="true"] { background: var(--sun); box-shadow: 0 5px 0 var(--ink); }
+  .pick-icon { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; border: 3px solid var(--ink); }
+  .pick-icon svg { width: 13px; margin-left: 3px; }
+  [aria-selected="true"] .pick-icon { background: var(--ink); color: var(--sun); }
+  .pick-text { flex: 1; min-width: 0; display: grid; }
+  /* titles stay on one line; the badge sits on the card's corner as a sticker so it never squeezes them */
+  .pick-title { font: var(--display-weight) clamp(20px, 1.9vw, 26px)/1.05 var(--display); white-space: nowrap; }
+  .pick-text small { font-size: 16px; color: var(--ink-soft); margin-top: 2px; }
+  .now { display: none; position: absolute; top: -13px; right: 14px; transform: rotate(4deg); font-style: normal; font-size: 13px; font-weight: 800; padding: 4px 10px; border-radius: 999px; background: var(--ink); color: var(--sun); }
+  [aria-selected="true"] .now { display: block; }
+  .b-now { display: none; }
+  .reel.playing [aria-selected="true"] .b-now { display: inline; }
+  .reel.playing [aria-selected="true"] .b-sel { display: none; }
+
+  /* ---------- Credits ---------- */
+  .credit-role { color: var(--ink-soft); }
+  .credits, .credits-chips { display: none; }
+  [data-credits="columns"] .credits { display: grid; }
+  [data-credits="chips"] .credits-chips { display: block; }
+  /* A: one list, with a chip per type to filter it */
+  .ix-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+  .ix-filters button {
+    padding: 9px 16px; border-radius: 999px; border: 2px solid var(--ink); background: none; font-size: 16px; font-weight: 600; cursor: pointer;
+    transition: transform .25s var(--spring), background .15s;
+  }
+  .ix-filters button:hover { transform: translateY(-2px); background: rgba(255, 143, 171, .25); }
+  .ix-filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .ix-filters sup { font-size: 12px; margin-left: 5px; vertical-align: 2px; }
+  .ix-rows { border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
+  .ix-row { display: grid; grid-template-columns: 2.4fr 1.6fr 1fr 90px; gap: 20px; padding: 13px 4px; border-bottom: 1px dashed rgba(43, 18, 20, .3); align-items: baseline; }
+  .ix-row:last-child { border-bottom: 0; }
+  .ix-title { font-weight: 800; line-height: 1.3; }
+  .ix-role { color: var(--ink-soft); font-size: 17px; }
+  .ix-kind { justify-self: start; font-size: 14px; font-weight: 600; padding: 2px 10px; border-radius: 999px; background: rgba(255, 143, 171, .3); }
+  .ix-year { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .ix-row[hidden] { display: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    .ix-row.pop { animation: pop .45s var(--spring) both; animation-delay: calc(var(--i) * 18ms); }
+    @keyframes pop { from { opacity: 0; transform: translateY(10px); } }
+  }
+  /* B: by type, in balanced columns closed by one shared rule */
+  .credits { grid-template-columns: repeat(var(--cols, 3), 1fr); gap: 0 clamp(28px, 4vw, 56px); border-bottom: 3px solid var(--ink); padding-bottom: 28px; }
+  .credit-col > :first-child h3 { margin-top: 0; }
+  .credits h3 { font: var(--display-weight) 28px/1.05 var(--display); margin: 34px 0 6px; padding-bottom: 8px; border-bottom: 3px solid var(--ink); }
+  .credit { display: grid; grid-template-columns: 1fr auto; column-gap: 16px; padding: 10px 0; border-bottom: 1px dashed rgba(43, 18, 20, .3); }
+  .credit-title { font-weight: 800; line-height: 1.3; }
+  .credit-role { grid-row: 2; font-size: 16px; line-height: 1.4; }
+  .credit-year { grid-row: 1 / span 2; grid-column: 2; font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .credit-col > :last-child .credit:last-child, .credit-col > .credit:last-child { border-bottom: 0; }
+
+  /* ---------- Footer ---------- */
+  .footer { position: relative; background: var(--hero); color: var(--paper); padding-block: clamp(80px, 10vw, 136px) 32px; }
+  .footer::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 22px; }
+  [data-edge="scallop"] .footer::before { background: radial-gradient(circle at 22px 0, var(--paper) 21.5px, transparent 22.5px) 0 0 / 44px 22px repeat-x; }
+  [data-edge="zigzag"] .footer::before { background: linear-gradient(45deg, transparent 50%, var(--paper) 50%) 0 0 / 22px 22px repeat-x, linear-gradient(-45deg, transparent 50%, var(--paper) 50%) 0 0 / 22px 22px repeat-x; transform: scaleY(-1); }
+  [data-edge="straight"] .footer::before { height: 10px; background: var(--sun); }
+  .footer h2 { color: var(--sun); font-size: clamp(48px, 7.5vw, 112px); margin-bottom: clamp(32px, 4vw, 52px); }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 28px 40px; align-items: end; }
+  .email { display: inline-block; margin-bottom: 24px; font-size: clamp(22px, 2.6vw, 32px); font-weight: 800; text-decoration: underline wavy var(--gum) 2px; text-underline-offset: 8px; }
+  .email:hover { color: var(--sun); }
+  .foot-grid h3 { margin: 0 0 8px; font-size: 15px; font-weight: 800; color: var(--gum); }
+  .foot-grid p, .foot-grid ul { margin: 0; padding: 0; list-style: none; }
+  .foot-grid li + li { margin-top: 4px; }
+  .foot-grid p a, .foot-grid li a { text-decoration: none; border-bottom: 2px solid var(--gum); }
+  .foot-grid p a:hover, .foot-grid li a:hover { color: var(--sun); }
+  .colophon { margin-top: 72px; color: rgba(255, 245, 240, .6); font-size: 14px; }
+
+  /* Lightbox */
+  .lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; text-align: center; }
+  .lightbox::backdrop { background: rgba(43, 18, 20, .93); }
+  .lightbox img { max-height: 82vh; max-width: 86vw; border-radius: 20px; }
+  .lightbox p { margin: 14px 0 0; color: var(--sun); font: var(--display-weight) 28px/1 var(--display); }
+  .lightbox button { position: fixed; background: var(--sun); color: var(--ink); border: 3px solid var(--ink); width: 52px; height: 52px; border-radius: 50%; font-size: 26px; line-height: 1; cursor: pointer; }
+  .lightbox .prev { left: 16px; top: 50%; } .lightbox .next { right: 16px; top: 50%; }
+  .lightbox-close { top: 16px; right: 16px; }
+
+  @media (max-width: 960px) {
+    .chars { grid-template-columns: repeat(3, 1fr); }
+    .reel-body { display: block; }
+    .reel-pick { margin-top: 32px; }
+    .reel-tabs { grid-template-columns: 1fr 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .foot-grid > :first-child { grid-column: 1 / -1; }
+    .ix-row { grid-template-columns: 1fr auto; gap: 4px 16px; }
+    .ix-role { grid-row: 2; }
+    .ix-kind { grid-row: 3; }
+    .ix-year { grid-row: 1; grid-column: 2; }
+  }
+  /* phones: the photo fills the top of the screen, the name sits across its lower edge */
+  @media (max-width: 700px) {
+    body { font-size: 17px; }
+    .hero { grid-template-columns: 1fr; grid-template-rows: auto auto; min-height: 0; }
+    .hero-photo { grid-column: 1; height: 68svh; }
+    .hero-photo img { -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+    .hero-copy { grid-column: 1; grid-row: 2; margin-top: -26svh; padding: 0 var(--gutter) 72px; }
+    .name { margin-right: 0; }
+    .chars { grid-template-columns: 1fr 1fr; }
+    /* two to a row leaves little gutter, so the tilt and shadows shrink to stay on screen */
+    [data-cards="tilt"] .char-photo { box-shadow: 4px 4px 0 var(--gum); }
+    [data-cards="tilt"] .char:nth-child(odd) button { transform: rotate(-1.4deg); }
+    [data-cards="tilt"] .char:nth-child(even) button { transform: rotate(1.4deg) translateY(8px); }
+    [data-frame="pop"] .reel-video { box-shadow: 6px 6px 0 var(--ink); }
+    .reel-tabs { grid-template-columns: 1fr; }
+    .lightbox .prev, .lightbox .next { top: auto; bottom: 16px; }
+  }
+
+  /* ================= v2 options (A = off / as before) ================= */
+  section { position: relative; }
+  section > .wrap { position: relative; z-index: 1; }
+
+  /* Section order: B puts the reel straight after the hero */
+  main { display: flex; flex-direction: column; }
+  [data-order="reel"] #reel { order: -1; }
+  [data-order="reel"] { --after-hero: var(--gum); }
+
+  /* Characters B: a pinboard of taped-up polaroids */
+  [data-chars="pin"] .chars { gap: clamp(28px, 4vw, 52px) clamp(20px, 3vw, 40px); }
+  [data-chars="pin"] .char button { position: relative; background: #fff; padding: 12px 12px 14px; border-radius: 4px; box-shadow: 0 12px 26px rgba(43, 18, 20, .18); }
+  [data-chars="pin"] .char-photo { border: 0; border-radius: 2px; box-shadow: none !important; }
+  [data-chars="pin"] .char-name { text-align: center; margin-top: 12px; }
+  [data-chars="pin"] .char button::before {
+    content: ""; position: absolute; top: -14px; left: 50%; width: 92px; height: 28px; margin-left: -46px; z-index: 2;
+    background: rgba(255, 210, 63, .75); transform: rotate(-4deg); box-shadow: 0 1px 2px rgba(43, 18, 20, .15);
+  }
+  [data-chars="pin"] .char:nth-child(even) button::before { background: rgba(255, 143, 171, .7); transform: rotate(5deg); }
+  [data-chars="pin"] .char:nth-child(4n+1) button { transform: rotate(-3.5deg); }
+  [data-chars="pin"] .char:nth-child(4n+2) button { transform: rotate(2.5deg) translateY(16px); }
+  [data-chars="pin"] .char:nth-child(4n+3) button { transform: rotate(-1.5deg) translateY(-6px); }
+  [data-chars="pin"] .char:nth-child(4n+4) button { transform: rotate(4deg) translateY(10px); }
+
+  /* Characters C: a casting note slides up over each photo when you point at it */
+  .char-photo { position: relative; }
+  .char-note { display: none; }
+  [data-chars="notes"] .char-note {
+    display: block; position: absolute; left: 10px; right: 10px; bottom: 10px; padding: 9px 12px;
+    background: var(--sun); border: 2px solid var(--ink); border-radius: 14px; font-size: 15px; font-weight: 600; line-height: 1.3;
+    transform: translateY(calc(100% + 16px)) rotate(-4deg); transition: transform .45s var(--spring);
+  }
+  [data-chars="notes"] .char button:hover .char-note, [data-chars="notes"] .char button:focus-visible .char-note { transform: rotate(-2deg); }
+  @media (hover: none) { [data-chars="notes"] .char-note { transform: rotate(-2deg); font-size: 13px; padding: 6px 9px; } }
+
+  /* Reel B: the video plays inside a retro TV; the picker becomes channel buttons */
+  .tv-antenna, .lbl-tv { display: none; }
+  [data-reel="tv"] .lbl-tv { display: inline; }
+  [data-reel="tv"] .lbl-pick { display: none; }
+  [data-reel="tv"] .reel-body { display: block; position: relative; max-width: 940px; margin-inline: auto; padding-top: 74px; }
+  [data-reel="tv"] .tv-antenna { display: block; position: absolute; top: 0; left: 50%; height: 78px; }
+  .tv-antenna::before { content: ""; position: absolute; bottom: -4px; left: -34px; width: 68px; height: 30px; background: var(--ink); border-radius: 34px 34px 0 0; }
+  .tv-antenna span { position: absolute; bottom: 10px; left: -3px; width: 6px; height: 84px; background: var(--ink); border-radius: 3px; transform-origin: 50% 100%; transform: rotate(-32deg); }
+  .tv-antenna span + span { transform: rotate(26deg); height: 74px; }
+  .tv-antenna span::after { content: ""; position: absolute; top: -12px; left: -7px; width: 14px; height: 14px; border-radius: 50%; background: var(--sun); border: 3px solid var(--ink); }
+  [data-reel="tv"] .reel-video { border: 22px solid var(--hero); border-radius: 44px; box-shadow: 0 0 0 4px var(--ink), 14px 14px 0 4px var(--ink); }
+  [data-reel="tv"] .reel-video::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: 20px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .55); background: repeating-linear-gradient(transparent 0 3px, rgba(0, 0, 0, .08) 3px 4px);
+  }
+  /* switching channel: a burst of static */
+  [data-reel="tv"] .reel-video.static::after {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation: snow .12s steps(3) infinite;
+  }
+  @keyframes snow { to { background-position: 90px 60px; } }
+  [data-reel="tv"] .reel-pick { margin-top: 36px; }
+  [data-reel="tv"] .reel-tabs { grid-template-columns: 1fr 1fr; }
+
+  /* Tape strips across the bottom of the hero, scrolling sideways */
+  .tapes { display: none; position: relative; z-index: 4; height: 0; }
+  [data-tape="one"] .tapes, [data-tape="two"] .tapes { display: block; }
+  .tape { position: absolute; left: -5vw; width: 110vw; top: -30px; overflow: hidden; padding: 10px 0; background: var(--sun); border-block: 3px solid var(--ink); transform: rotate(-2deg); }
+  .tape + .tape { display: none; background: var(--gum); transform: rotate(2.4deg); top: -24px; z-index: -1; }
+  [data-tape="two"] .tape + .tape { display: block; }
+  [data-order="reel"] .tape + .tape { background: var(--paper); }
+  .tape-track { display: flex; width: max-content; font: var(--display-weight) 24px/1 var(--display); color: var(--ink); white-space: nowrap; }
+  .tape-track span { padding-right: 28px; }
+  .tape-track span::after { content: "✦"; padding-left: 28px; font-family: var(--text); }
+  @media (prefers-reduced-motion: no-preference) {
+    .tape-track { animation: slide 40s linear infinite; }
+    .tape + .tape .tape-track { animation-direction: reverse; }
+    @keyframes slide { to { transform: translateX(-50%); } }
+  }
+
+  /* Name: B letters jiggle when touched; C letters lean toward the cursor */
+  .name.landed .ch { animation: none; }
+  [data-namefx="lean"] .name .ch { transition: transform .35s var(--spring); }
+  @media (prefers-reduced-motion: no-preference) {
+    /* once landed, a small hop ripples through the name every few seconds, all by itself.
+       It moves the separate translate/rotate properties, so it adds to the lean effect's transform */
+    .name.landed .ch { animation: dance 4.5s ease-in-out calc(.6s + var(--i) * 70ms) infinite; }
+    @keyframes dance {
+      0%, 14%, 100% { translate: 0 0; rotate: 0deg; }
+      5% { translate: 0 -.06em; rotate: -3deg; }
+      10% { translate: 0 .01em; rotate: 1.5deg; }
+    }
+    .name.landed .ch.jig { animation: jig .6s var(--spring); }
+    @keyframes jig { 30% { transform: translateY(-.2em) rotate(-10deg) scale(1.08); } 65% { transform: translateY(.04em) rotate(6deg); } }
+  }
+
+  /* Cursor B: a trail of sparkles; Confetti B: buttons burst when clicked */
+  .spark, .confetti { position: fixed; top: 0; left: 0; z-index: 60; pointer-events: none; }
+  .spark { width: 16px; height: 16px; margin: -8px 0 0 -8px; }
+  .confetti { width: 10px; height: 14px; margin: -7px 0 0 -5px; border: 1.5px solid var(--ink); border-radius: 2px; }
+
+  /* Hero stickers: B spinning badge on the photo; C a speech bubble */
+  .hero-badge, .hero-bubble { display: none; }
+  [data-sticker="badge"] .hero-badge { display: block; position: absolute; right: 7%; bottom: 13%; width: clamp(120px, 11vw, 168px); z-index: 2; }
+  .hero-badge svg { display: block; width: 100%; height: auto; }
+  .hero-badge text { font: 800 15px var(--text); fill: var(--ink); }
+  [data-sticker="bubble"] .hero-bubble {
+    display: block; position: absolute; left: 12%; top: 15%; z-index: 2; margin: 0; padding: 12px 20px 14px;
+    background: var(--paper); color: var(--ink); border: 3px solid var(--ink); border-radius: 24px; box-shadow: 5px 5px 0 var(--ink);
+    font: var(--display-weight) clamp(20px, 2vw, 28px)/1 var(--display); transform: rotate(-6deg);
+  }
+  .hero-bubble::after { content: ""; position: absolute; right: 26px; bottom: -17px; width: 22px; height: 22px; background: var(--paper); border: solid var(--ink); border-width: 0 3px 3px 0; transform: skewX(30deg) rotate(45deg); }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-badge svg { animation: spin 16s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    [data-sticker="bubble"] .hero-bubble { animation: bubble .6s var(--spring) 1.5s both, bob 3.5s ease-in-out 2.1s infinite; }
+    @keyframes bubble { from { opacity: 0; transform: rotate(-6deg) scale(.3); } }
+    @keyframes bob { 50% { transform: rotate(-3deg) translateY(-6px); } }
+  }
+
+  /* Scroll progress B: a yellow bar along the top with a star riding its tip */
+  .progress { display: none; position: fixed; top: 0; left: 0; right: 0; height: 8px; z-index: 40; pointer-events: none; }
+  [data-progress="on"] .progress { display: block; }
+  .progress span { display: block; position: relative; height: 100%; width: calc(var(--p, 0) * 100%); background: var(--sun); border-bottom: 2px solid var(--ink); }
+  .progress span::after { content: "★"; position: absolute; right: -9px; top: -3px; font-size: 18px; line-height: 1; color: var(--gum); -webkit-text-stroke: 1px var(--ink); }
+
+  /* Copy email B */
+  .copy-email { display: none; margin: 0 0 24px 14px; vertical-align: 6px; padding: 6px 14px; border-radius: 999px; border: 2px solid var(--gum); background: none; color: var(--paper); font-size: 14px; font-weight: 800; cursor: pointer; transition: transform .3s var(--spring); }
+  [data-copy="on"] .copy-email { display: inline-block; }
+  .copy-email:hover { transform: rotate(-4deg) scale(1.06); }
+  .copy-email.done { background: var(--sun); border-color: var(--sun); color: var(--ink); transform: rotate(-6deg) scale(1.1); }
+
+  /* Book-me bubble B: floats bottom-left, ducks away once the footer is on screen */
+  .bookme { display: none; position: fixed; left: 16px; bottom: 16px; z-index: 45; padding: 12px 20px; border-radius: 999px; text-decoration: none;
+    background: var(--sun); color: var(--ink); border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink); font: var(--display-weight) 20px/1 var(--display);
+    transform: rotate(-5deg); transition: transform .4s var(--spring); }
+  [data-bookme="on"] .bookme { display: block; }
+  .bookme:hover { transform: rotate(0) scale(1.08); }
+  .bookme.away { transform: rotate(-5deg) scale(0); }
+  @media (prefers-reduced-motion: no-preference) {
+    .bookme:not(.away):not(:hover) { animation: wobble 4s ease-in-out infinite; }
+    @keyframes wobble { 0%, 82%, 100% { transform: rotate(-5deg); } 86% { transform: rotate(4deg) scale(1.06); } 90% { transform: rotate(-9deg); } 94% { transform: rotate(2deg); } }
+  }
+
+  /* Doodles: B faint hand-drawn ones in the backgrounds; C bold stickers by the headings; D both */
+  .doodles { display: none; position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  [data-doodles="faint"] .doodles, [data-doodles="both"] .doodles { display: block; }
+  .dd { position: absolute; width: clamp(34px, 4vw, 58px); height: auto; aspect-ratio: 1; color: var(--gum); opacity: .6; }
+  .reel .dd { color: var(--ink); opacity: .2; }
+  .hero .dd { color: var(--sun); opacity: .28; }
+  @media (prefers-reduced-motion: no-preference) {
+    .dd { animation: float 7s ease-in-out infinite; }
+    .dd:nth-child(2n) { animation-duration: 9s; animation-delay: -3s; }
+    .dd:nth-child(3n) { animation-duration: 11s; animation-delay: -5s; }
+    @keyframes float { 50% { transform: translateY(-12px) rotate(10deg); } }
+  }
+  .sec-head { position: relative; width: fit-content; max-width: 100%; }
+  .sticker { display: none; position: absolute; top: -26px; right: calc(-1 * clamp(70px, 8vw, 104px)); width: clamp(62px, 7vw, 92px); height: auto; aspect-ratio: 1; transform: rotate(12deg); transition: transform .5s var(--spring); }
+  [data-doodles="stickers"] .sticker, [data-doodles="both"] .sticker { display: block; }
+  .sec-head:hover .sticker { transform: rotate(-8deg) scale(1.12); }
+
+  /* Paper: B halftone dots; C notebook grid */
+  [data-paper="dots"], [data-paper="chars"] #characters { background-image: radial-gradient(rgba(255, 143, 171, .4) 1.3px, transparent 1.8px); background-size: 20px 20px; }
+  [data-paper="grid"] { background-image: linear-gradient(rgba(255, 143, 171, .22) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 143, 171, .22) 1px, transparent 1px); background-size: 30px 30px; }
+
+  /* Headings: B highlighter swipe; C a stacked pop shadow */
+  [data-heads="marker"] .squiggle, [data-heads="pop"] .squiggle { display: none; }
+  [data-heads="marker"] .sec-head h2 { display: inline; padding: 0 .12em; background: linear-gradient(transparent 46%, var(--sun) 46% 80%, transparent 80%); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  [data-heads="marker"] .reel .sec-head h2 { background-image: linear-gradient(transparent 46%, var(--paper) 46% 80%, transparent 80%); }
+  [data-heads="pop"] .sec-head h2 { text-shadow: 3px 3px 0 var(--gum), 6px 6px 0 var(--ink); }
+  [data-heads="pop"] .reel .sec-head h2 { text-shadow: 3px 3px 0 var(--sun), 6px 6px 0 var(--ink); }
+
+  /* Section edges B: the reel band gets scalloped edges too */
+  [data-bands="all"] .reel::before, [data-bands="all"] .reel::after { content: ""; position: absolute; left: 0; right: 0; height: 22px; z-index: 2; }
+  [data-bands="all"] .reel::before { top: -21px; background: radial-gradient(circle at 22px 22px, var(--gum) 21.5px, transparent 22.5px) 0 0 / 44px 22px repeat-x; }
+  [data-bands="all"] .reel::after { bottom: -21px; background: radial-gradient(circle at 22px 0, var(--gum) 21.5px, transparent 22.5px) 0 0 / 44px 22px repeat-x; }
+  [data-order="reel"][data-bands="all"] .reel::before { display: none; }
+
+  @media (max-width: 700px) {
+    [data-reel="tv"] .reel-body { padding-top: 56px; }
+    [data-reel="tv"] .tv-antenna { transform: scale(.7); transform-origin: 50% 100%; height: 58px; }
+    [data-reel="tv"] .reel-video { border-width: 12px; border-radius: 26px; box-shadow: 0 0 0 3px var(--ink), 7px 7px 0 3px var(--ink); }
+    [data-reel="tv"] .reel-tabs { grid-template-columns: 1fr; }
+    [data-chars="pin"] .char button { padding: 8px 8px 10px; }
+    [data-chars="pin"] .char button::before { width: 64px; margin-left: -32px; height: 22px; top: -10px; }
+    [data-chars="pin"] .char:nth-child(odd) button { transform: rotate(-2deg); }
+    [data-chars="pin"] .char:nth-child(even) button { transform: rotate(2deg) translateY(10px); }
+    .tape-track { font-size: 19px; }
+    [data-sticker="badge"] .hero-badge { right: 5%; top: 5%; bottom: auto; width: 100px; }
+    [data-sticker="bubble"] .hero-bubble { left: 6%; top: 7%; }
+    .dd:nth-child(n+3) { display: none; }
+    .sticker { top: -40px; right: 0; width: 56px; }
+    .bookme { font-size: 17px; padding: 10px 16px; }
+  }
+
+  /* MOCKUP ONLY: options panel */
+  .mock h4 { margin: 8px 0 0; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #777; }
+  .mock details summary { cursor: pointer; color: #555; }
+  .mock details[open] { display: grid; gap: 9px; }
+  .mock { position: fixed; right: 16px; bottom: 16px; z-index: 50; display: grid; gap: 9px; padding: 14px 16px; width: 280px;
+    max-height: calc(100vh - 32px); overflow-y: auto;
+    background: #fff; color: #000; font: 13px/1.3 system-ui, sans-serif; box-shadow: 0 8px 30px rgba(0,0,0,.4); border-radius: 0; }
+  .mock label { display: grid; gap: 3px; min-width: 0; }
+  .mock select { font: inherit; padding: 3px; width: 100%; }
+  .mock[hidden], .mock-toggle[hidden] { display: none; }
+  .mock-toggle { position: fixed; right: 16px; bottom: 16px; z-index: 50; padding: 8px 14px; background: #fff; color: #000; border: 0; cursor: pointer; }
+</style>
+<!-- Options panel shows only with ?options in the URL; demo visitors see the approved defaults. -->
+<script>if (!/[?&]options\b/.test(location.search)) document.documentElement.classList.add('no-mock');</script>
+<style>.no-mock .mock, .no-mock .mock-toggle { display: none !important; }</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="squiggle" viewBox="0 0 150 18"><path d="M3 11 C 15 1, 25 1, 37 9 S 59 17, 71 9 S 93 1, 105 9 S 127 17, 147 7" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></symbol>
+  <symbol id="play" viewBox="0 0 10 12"><path d="M0 0 L10 6 L0 12 Z" fill="currentColor"/></symbol>
+  <!-- faint doodles: line drawings in currentColor -->
+  <symbol id="d-star" viewBox="0 0 48 48"><path d="M24 4 L29 18 L44 19 L32 28 L36 43 L24 34 L12 43 L16 28 L4 19 L19 18 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></symbol>
+  <symbol id="d-spark" viewBox="0 0 48 48"><path d="M24 4 C26 18 30 22 44 24 C30 26 26 30 24 44 C22 30 18 26 4 24 C18 22 22 18 24 4 Z" fill="currentColor"/></symbol>
+  <symbol id="d-heart" viewBox="0 0 48 48"><path d="M24 41 C10 31 4 23 6 15 C8 8 18 6 24 15 C30 6 40 8 42 15 C44 23 38 31 24 41 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></symbol>
+  <symbol id="d-spiral" viewBox="0 0 48 48"><path d="M24 24 c3 0 4 3 2 5 c-3 3 -8 1 -8 -3 c0 -6 7 -9 12 -6 c6 4 5 13 -1 16 c-8 4 -18 -1 -18 -10 c0 -10 10 -17 20 -14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="d-zap" viewBox="0 0 48 48"><path d="M28 4 L12 27 L23 27 L19 44 L36 20 L25 20 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></symbol>
+  <symbol id="d-smile" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="24" r="18"/><path d="M18 20 v3 M30 20 v3 M16 29 c4 6 12 6 16 0"/></g></symbol>
+  <!-- bold stickers: filled, ink-outlined -->
+  <symbol id="s-masks" viewBox="0 0 64 64"><g stroke="#2b1214" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M28 16 C40 11 53 13 58 17 C60 33 54 47 44 49 C34 49 28 36 28 16 Z" style="fill:var(--gum)"/><path d="M37 26 l5 2 M48 28 l5 -2 M38 41 c3 -5 10 -5 13 0" fill="none"/>
+    <path d="M6 10 C18 6 31 8 36 12 C38 28 32 42 22 44 C12 44 6 30 6 10 Z" style="fill:var(--sun)"/><path d="M13 20 c2 -2 4 -2 6 0 M24 20 c2 -2 4 -2 6 0 M14 29 c3 6 11 6 14 0" fill="none"/></g></symbol>
+  <symbol id="s-clapper" viewBox="0 0 64 64"><g stroke="#2b1214" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="8" y="28" width="48" height="28" rx="4" style="fill:var(--sun)"/><path d="M8 38 H56" fill="none"/>
+    <path d="M7 26 L52 12 L55 21 L10 35 Z" fill="#fff5f0"/><path d="M18 22.5 L23 30.5 M29 19 L34 27 M40 15.5 L45 23.5" fill="none"/></g></symbol>
+  <symbol id="s-popcorn" viewBox="0 0 64 64"><g stroke="#2b1214" stroke-width="3" stroke-linejoin="round">
+    <circle cx="19" cy="23" r="8" fill="#fff5f0"/><circle cx="45" cy="22" r="8" fill="#fff5f0"/><circle cx="32" cy="15" r="9" fill="#fff5f0"/><circle cx="26" cy="25" r="7" fill="#fff5f0"/><circle cx="38" cy="26" r="7" fill="#fff5f0"/>
+    <path d="M12 29 H52 L46 60 H18 Z" fill="#fff5f0"/><path d="M22 31 L25 58 M32 31 V58 M42 31 L39 58" fill="none" stroke-width="5" style="stroke:var(--gum)"/><path d="M12 29 H52 L46 60 H18 Z" fill="none"/></g></symbol>
+</svg>
+
+<header class="hero" id="top">
+  <div class="hero-photo">
+    <img src="assets/photos/harrison-457.jpg" alt="Harrison Keen, laughing" width="900" height="1125" fetchpriority="high">
+    <img src="assets/photos/hero-harrison-keen-5.jpg" alt="Harrison Keen, smiling" width="720" height="900">
+    <div class="hero-badge" aria-hidden="true"><svg viewBox="0 0 200 200">
+      <path id="badge-ring" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0" fill="none"/>
+      <circle cx="100" cy="100" r="96" fill="#ffd23f" stroke="#2b1214" stroke-width="4"/>
+      <circle cx="100" cy="100" r="50" fill="#ff8fab" stroke="#2b1214" stroke-width="3"/>
+      <text><textPath href="#badge-ring" textLength="448" lengthAdjust="spacing">AVAILABLE FOR WORK ✦ BOOK A SELF-TAPE ✦</textPath></text>
+      <use href="#d-spark" x="72" y="72" width="56" height="56" style="color:#2b1214"/>
+    </svg></div>
+    <p class="hero-bubble" aria-hidden="true">Hey there!</p>
+  </div>
+  <div class="doodles" aria-hidden="true">
+    <svg class="dd" style="top:9%;left:3%"><use href="#d-spark"/></svg>
+    <svg class="dd" style="top:78%;left:38%"><use href="#d-star"/></svg>
+    <svg class="dd" style="top:20%;left:44%"><use href="#d-spiral"/></svg>
+  </div>
+  <div class="hero-copy">
+    <h1 class="name display"><span class="fit"><span class="line">Harrison</span><span class="line">Keen</span></span></h1>
+    <div class="hero-actions">
+      <a class="pill" href="#reel"><svg viewBox="0 0 10 12" aria-hidden="true"><use href="#play"/></svg>Watch my reel</a>
+      <a class="pill ghost" href="assets/HarrisonKeen_ActingCV.pdf" download>Download CV</a>
+    </div>
+  </div>
+</header>
+
+<div class="tapes" aria-hidden="true">
+  <div class="tape"><div class="tape-track"><span>Algorithm</span><span>Super Godfather 2</span><span>Sons of Sun</span><span>Stranger Cases</span><span>Chai Tea</span><span>Rolling Home</span><span>Off Book</span></div></div>
+  <div class="tape"><div class="tape-track"><span>Feature film</span><span>Vertical drama</span><span>Short film</span><span>Theatre</span><span>Voice</span><span>Commercials</span><span>Music video</span><span>Web series</span></div></div>
+</div>
+
+<main>
+
+  <section id="characters" aria-labelledby="chars-title">
+    <div class="doodles" aria-hidden="true">
+      <svg class="dd" style="top:6%;right:5%"><use href="#d-star"/></svg>
+      <svg class="dd" style="top:44%;left:1.2%"><use href="#d-spiral"/></svg>
+      <svg class="dd" style="bottom:5%;right:2.5%"><use href="#d-heart"/></svg>
+      <svg class="dd" style="top:9%;left:52%"><use href="#d-spark"/></svg>
+    </div>
+    <div class="wrap">
+      <div class="sec-head"><h2 class="display" id="chars-title">Characters I can play</h2><svg class="squiggle" aria-hidden="true"><use href="#squiggle"/></svg><svg class="sticker" aria-hidden="true"><use href="#s-masks"/></svg></div>
+      <!-- Each look gets a character name (and a one-line casting note for option C). Rename per client; a credit can go in the alt text. -->
+      <ul class="chars">
+        <li class="char"><button type="button"><span class="char-photo"><img src="assets/photos/hero-harrison-keen-5.jpg" alt="Smiling headshot on green" loading="lazy" width="720" height="900"><span class="char-note">Borrows your ladder. Returns it washed.</span></span><span class="char-name">The boy next door</span></button></li>
+        <li class="char"><button type="button"><span class="char-photo"><img src="assets/photos/harrison-keen-4.jpg" alt="Moody headshot in a black jacket" loading="lazy" width="900" height="1125"><span class="char-note">Never raises his voice. Doesn&rsquo;t need to.</span></span><span class="char-name">The villain</span></button></li>
+        <li class="char"><button type="button"><span class="char-photo"><img src="assets/photos/hero-harrison-keen-2.jpg" alt="Headshot in a grey suit and tie" loading="lazy" width="720" height="900"><span class="char-note">Owns the building. Possibly the street.</span></span><span class="char-name">The billionaire</span></button></li>
+        <li class="char"><button type="button"><span class="char-photo"><img src="assets/photos/dsc07561.jpg" alt="Stage still in a gold shirt" loading="lazy" width="900" height="1350"><span class="char-note">Hips: certified. Hair: immovable.</span></span><span class="char-name">The rock 'n' roller</span></button></li>
+        <li class="char"><button type="button"><span class="char-photo"><img src="assets/photos/dsc08433.jpg" alt="Stage still, an intimate scene" loading="lazy" width="900" height="1350"><span class="char-note">Shows up in the rain. Every time.</span></span><span class="char-name">The love interest</span></button></li>
+        <li class="char"><button type="button"><span class="char-photo"><img src="assets/photos/img_1783_cropped.jpg" alt="Film still in an orange prison jumpsuit" loading="lazy" width="900" height="1351"><span class="char-note">Knows a guy. Knows everybody.</span></span><span class="char-name">The inmate</span></button></li>
+        <li class="char"><button type="button"><span class="char-photo"><img src="assets/photos/scaleddown.jpg" alt="Period costume still with flat cap and braces" loading="lazy" width="900" height="1382"><span class="char-note">Settles it outside. Polite about it.</span></span><span class="char-name">The 1920s tough</span></button></li>
+        <li class="char"><button type="button"><span class="char-photo"><img src="assets/photos/harrison-keen-3.jpg" alt="Headshot in a brown leather jacket" loading="lazy" width="900" height="1125"><span class="char-note">Leather jacket, zero curfew.</span></span><span class="char-name">The bad boy</span></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reel" id="reel" aria-labelledby="reel-title">
+    <div class="doodles" aria-hidden="true">
+      <svg class="dd" style="top:10%;right:7%"><use href="#d-zap"/></svg>
+      <svg class="dd" style="bottom:9%;left:2.5%"><use href="#d-star"/></svg>
+      <svg class="dd" style="top:12%;left:30%"><use href="#d-smile"/></svg>
+    </div>
+    <div class="wrap">
+      <div class="sec-head"><h2 class="display" id="reel-title">Reel</h2><svg class="squiggle" aria-hidden="true"><use href="#squiggle"/></svg><svg class="sticker" aria-hidden="true"><use href="#s-clapper"/></svg></div>
+      <div class="reel-body">
+        <div class="tv-antenna" aria-hidden="true"><span></span><span></span></div>
+        <div class="reel-video">
+          <video id="player" playsinline preload="none" disablepictureinpicture
+                 poster="assets/photos/showreel-poster.jpg"
+                 src="assets/video/Showreel_HarrisonKeen.mp4"></video>
+          <button class="reel-start" type="button" aria-label="Play video"><span><svg viewBox="0 0 10 12" aria-hidden="true"><use href="#play"/></svg></span></button>
+        </div>
+        <div class="reel-pick">
+          <p class="pick-label" id="pick-label"><span class="lbl-pick">Choose a video</span><span class="lbl-tv">Change the channel</span></p>
+          <div class="reel-tabs" role="tablist" aria-labelledby="pick-label">
+            <button role="tab" aria-selected="true"
+                    data-src="assets/video/Showreel_HarrisonKeen.mp4"
+                    data-poster="assets/photos/showreel-poster.jpg"><span class="pick-icon" aria-hidden="true"><svg viewBox="0 0 10 12"><use href="#play"/></svg></span><span class="pick-text"><span class="pick-title">Showreel</span><small>Selected scenes</small></span><em class="now"><span class="b-now">Now playing</span><span class="b-sel">Selected</span></em></button>
+            <button role="tab" aria-selected="false"
+                    data-src="assets/video/villain-clips.mp4"
+                    data-poster="assets/video/villain-clips.jpg"><span class="pick-icon" aria-hidden="true"><svg viewBox="0 0 10 12"><use href="#play"/></svg></span><span class="pick-text"><span class="pick-title">Villain scenes</span><small>Darker roles</small></span><em class="now"><span class="b-now">Now playing</span><span class="b-sel">Selected</span></em></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="credits" aria-labelledby="credits-title">
+    <div class="doodles" aria-hidden="true">
+      <svg class="dd" style="top:4%;right:9%"><use href="#d-spark"/></svg>
+      <svg class="dd" style="top:46%;left:1%"><use href="#d-heart"/></svg>
+      <svg class="dd" style="bottom:4%;right:3%"><use href="#d-spiral"/></svg>
+    </div>
+    <div class="wrap">
+      <div class="sec-head"><h2 class="display" id="credits-title">Credits</h2><svg class="squiggle" aria-hidden="true"><use href="#squiggle"/></svg><svg class="sticker" aria-hidden="true"><use href="#s-popcorn"/></svg></div>
+      <div class="credits-chips">
+        <div class="ix-filters" role="group" aria-label="Show credits by type"></div>
+        <div class="ix-rows"></div>
+      </div>
+      <div class="credits">
+        <div class="credit-keep"><h3>Feature film</h3><div class="credit"><span class="credit-title">Algorithm</span><span class="credit-role">Danny Streeter</span><span class="credit-year">2026</span></div></div>
+        <div class="credit-keep"><h3>Vertical drama</h3><div class="credit"><span class="credit-title">Super Godfather 2</span><span class="credit-role">Felix Thorne</span><span class="credit-year">2026</span></div></div>
+        <div class="credit"><span class="credit-title">Black Ties and White Lies</span><span class="credit-role">Brandon Harrington</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">The Duel</span><span class="credit-role">Harrison</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">Superstar</span><span class="credit-role">Aaron Myers</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">Reborn at 18: The Great Grandma Takes Charge</span><span class="credit-role">Ryan Ashford</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">Take Back My Billionaire Stolen By Bestie</span><span class="credit-role">Jack</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">Poolwatch</span><span class="credit-role">Anthony's Man-Crush</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">The Summer I Turned Bad</span><span class="credit-role">Dale</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">Runaway Prince's Secret Vacation</span><span class="credit-role">Benji</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">Heiress Returns Boss's Defense and Love</span><span class="credit-role">Daniel Roth</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">Flash Marriage to My Billionaire Hobo Hubby</span><span class="credit-role">Mike</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">Reborn to Find I Am the Mogul's Lost Love</span><span class="credit-role">Jimmy Dupont</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">The Mafia's Unwanted Blind Savior</span><span class="credit-role">Zed</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">The Heiress Blacklisted Her Husband</span><span class="credit-role">Thomas Wilson</span><span class="credit-year">2024</span></div>
+        <div class="credit"><span class="credit-title">Daddy's Best Friend Made Me His Billion Dollar Wife</span><span class="credit-role">Michael Lambert</span><span class="credit-year">2024</span></div>
+        <div class="credit"><span class="credit-title">Contract Marriage Before Election</span><span class="credit-role">Elliot Hill</span><span class="credit-year">2024</span></div>
+        <div class="credit-keep"><h3>Short film</h3><div class="credit"><span class="credit-title">Viveza Criolla</span><span class="credit-role">George</span><span class="credit-year">2026</span></div></div>
+        <div class="credit"><span class="credit-title">Sambar Pot Pie</span><span class="credit-role">David</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">Off Book</span><span class="credit-role">Derek Hughes</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">The Girl Who Drew Stars</span><span class="credit-role">Lead</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">Standing 8</span><span class="credit-role">Caleb</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">Red Eye</span><span class="credit-role">Andres</span><span class="credit-year">2026</span></div>
+        <div class="credit"><span class="credit-title">Happy Hour</span><span class="credit-role">The Robber</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">The One Left Behind</span><span class="credit-role">Charlie</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">The Return</span><span class="credit-role">Edward</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">Rush Helm</span><span class="credit-role">Ross / Narrator</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">The Bystander Effect</span><span class="credit-role">Clyde</span><span class="credit-year">2023</span></div>
+        <div class="credit"><span class="credit-title">The Barber</span><span class="credit-role">Employee (Monster)</span><span class="credit-year">2023</span></div>
+        <div class="credit-keep"><h3>Web series</h3><div class="credit"><span class="credit-title">Chai Tea</span><span class="credit-role">Blake Owens</span><span class="credit-year">2026</span></div></div>
+        <div class="credit-keep"><h3>Voice</h3><div class="credit"><span class="credit-title">Stranger Cases</span><span class="credit-role">Agent Ethan Hayes</span><span class="credit-year">2025&ndash;26</span></div></div>
+        <div class="credit"><span class="credit-title">Welcome to Fosters (Neon Inkwell Collection)</span><span class="credit-role">Mark</span><span class="credit-year">2024</span></div>
+        <div class="credit-keep"><h3>Commercial</h3><div class="credit"><span class="credit-title">SERVD Cards Social Media Campaign</span><span class="credit-role">Boyfriend</span><span class="credit-year">2025</span></div></div>
+        <div class="credit"><span class="credit-title">Esky Promotion</span><span class="credit-role">Male Character</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">WD-40 No Vac Promotion</span><span class="credit-role">Male Character</span><span class="credit-year">2025</span></div>
+        <div class="credit"><span class="credit-title">eBay &times; TikTok &lsquo;Seen It All&rsquo; Campaign</span><span class="credit-role">Charlie</span><span class="credit-year">2024</span></div>
+        <div class="credit"><span class="credit-title">Finder &lsquo;Uhhh-Huh!&rsquo; Sea Urchin Ad</span><span class="credit-role">Jacob</span><span class="credit-year">2024</span></div>
+        <div class="credit"><span class="credit-title">Cochlear Odyssey</span><span class="credit-role">Graduating Grandson</span><span class="credit-year">2024</span></div>
+        <div class="credit-keep"><h3>Music video</h3><div class="credit"><span class="credit-title">Rolling Home</span><span class="credit-role">Lead</span><span class="credit-year">2026</span></div></div>
+        <div class="credit-keep"><h3>Theatre</h3><div class="credit"><span class="credit-title">Sons of Sun</span><span class="credit-role">Elvis Presley, Johnny Cash, Carl Perkins &amp; Jerry Lee Lewis</span><span class="credit-year">2024&ndash;25</span></div></div>
+        <div class="credit"><span class="credit-title">Mystery of the Blue Bloodhound</span><span class="credit-role">Mark Barrens</span><span class="credit-year">2023</span></div>
+        <div class="credit"><span class="credit-title">Murder by Invitation</span><span class="credit-role">Mr Dawes</span><span class="credit-year">2023</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <h2 class="display">Casting &amp; bookings</h2>
+    <div class="foot-grid">
+      <div>
+        <a class="email" href="mailto:keen_ha@outlook.com">keen_ha@outlook.com</a><button type="button" class="copy-email">Copy</button><br>
+        <a class="pill" href="assets/HarrisonKeen_ActingCV.pdf" download>Download CV</a>
+      </div>
+      <div>
+        <h3>Representation</h3>
+        <!-- Replace with the client's agent, or remove this column. -->
+        <p>Agency Name<br><a href="mailto:agent@example.com">agent@example.com</a></p>
+      </div>
+      <div>
+        <h3>Profiles</h3>
+        <ul>
+          <li><a href="https://www.imdb.com/name/nm15486957/" rel="noopener">IMDb</a></li>
+          <li><a href="https://www.instagram.com/harrison.keen/" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="colophon">© 2026 Harrison Keen</p>
+  </div>
+</footer>
+
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="bookme" href="#contact">Book me!</a>
+
+<dialog class="lightbox" aria-label="Photo viewer">
+  <img alt="">
+  <p></p>
+  <button class="lightbox-step prev" aria-label="Previous photo">‹</button>
+  <button class="lightbox-step next" aria-label="Next photo">›</button>
+  <button class="lightbox-close" aria-label="Close">×</button>
+</dialog>
+
+<!-- MOCKUP ONLY: options panel -->
+<button class="mock-toggle" hidden>Options</button>
+<aside class="mock" aria-label="Mockup options">
+  <strong>Mockup options</strong>
+  <h4>Structure</h4>
+  <label>Section order <select data-opt="order">
+    <option value="chars">A: characters → reel → credits</option>
+    <option value="reel">B: reel → characters → credits</option>
+  </select></label>
+  <label>Characters layout <select data-opt="chars">
+    <option value="grid">A: sticker grid</option>
+    <option value="pin">B: taped polaroid pinboard</option>
+    <option value="notes">C: grid + casting notes on hover</option>
+  </select></label>
+  <label>Reel layout <select data-opt="reel">
+    <option value="beside">A: picker beside video</option>
+    <option value="tv">B: retro TV + channel buttons</option>
+  </select></label>
+  <h4>Features</h4>
+  <label>Tape strips under hero <select data-opt="tape">
+    <option value="off">A: off</option>
+    <option value="one">B: one scrolling tape</option>
+    <option value="two">C: two crossed tapes</option>
+  </select></label>
+  <label>Name on hover <select data-opt="namefx">
+    <option value="still">A: still</option>
+    <option value="jiggle">B: letters jiggle</option>
+    <option value="lean">C: letters lean to cursor</option>
+  </select></label>
+  <label>Hero sticker <select data-opt="sticker">
+    <option value="none">A: none</option>
+    <option value="badge">B: spinning badge</option>
+    <option value="bubble">C: speech bubble</option>
+  </select></label>
+  <label>Cursor <select data-opt="cursor">
+    <option value="normal">A: normal</option>
+    <option value="sparkle">B: sparkle trail</option>
+  </select></label>
+  <label>Confetti on buttons <select data-opt="confetti">
+    <option value="off">A: off</option>
+    <option value="on">B: on</option>
+  </select></label>
+  <label>Scroll progress bar <select data-opt="progress">
+    <option value="off">A: off</option>
+    <option value="on">B: yellow bar + star</option>
+  </select></label>
+  <label>Copy-email button <select data-opt="copy">
+    <option value="off">A: off</option>
+    <option value="on">B: on</option>
+  </select></label>
+  <label>Floating "Book me!" <select data-opt="bookme">
+    <option value="off">A: off</option>
+    <option value="on">B: on</option>
+  </select></label>
+  <h4>Decoration</h4>
+  <label>Doodles <select data-opt="doodles">
+    <option value="none">A: none</option>
+    <option value="faint">B: faint background doodles</option>
+    <option value="stickers">C: stickers by headings</option>
+    <option value="both">D: both</option>
+  </select></label>
+  <label>Paper <select data-opt="paper">
+    <option value="plain">A: plain</option>
+    <option value="dots">B: halftone dots everywhere</option>
+    <option value="chars">C: halftone dots, Characters only</option>
+    <option value="grid">D: notebook grid</option>
+  </select></label>
+  <label>Headings <select data-opt="heads">
+    <option value="squiggle">A: squiggle underline</option>
+    <option value="marker">B: highlighter swipe</option>
+    <option value="pop">C: stacked pop shadow</option>
+  </select></label>
+  <label>Section edges <select data-opt="bands">
+    <option value="ends">A: hero + footer only</option>
+    <option value="all">B: reel band scalloped too</option>
+  </select></label>
+  <details>
+  <summary>Locked v1 picks (all A)</summary>
+  <label>Hero photo <select data-opt="hero">
+    <option value="laugh">A: laughing, red backdrop</option>
+    <option value="smile">B: smiling, teal backdrop</option>
+  </select></label>
+  <label>Name font <select data-opt="name">
+    <option value="shrikhand">A: Shrikhand (retro script)</option>
+    <option value="bagel">B: Bagel Fat One (bubbly)</option>
+    <option value="lilita">C: Lilita One (friendly bold)</option>
+    <option value="gluten">D: Gluten (hand-lettered)</option>
+  </select></label>
+  <label>Hero edge <select data-opt="edge">
+    <option value="scallop">A: scallops</option>
+    <option value="zigzag">B: zigzag</option>
+    <option value="straight">C: straight yellow bar</option>
+  </select></label>
+  <label>Character cards <select data-opt="cards">
+    <option value="tilt">A: tilted stickers</option>
+    <option value="straight">B: straight tiles</option>
+  </select></label>
+  <label>Reel frame <select data-opt="frame">
+    <option value="pop">A: hard shadow</option>
+    <option value="flat">B: outline only</option>
+  </select></label>
+  <label>Credits <select data-opt="credits">
+    <option value="chips">A: one list + type chips</option>
+    <option value="columns">B: by type, in columns</option>
+  </select></label>
+  </details>
+  <button type="button" class="mock-hide" style="justify-self:end">Hide</button>
+</aside>
+
+<script>
+  const root = document.documentElement;
+
+  // Hero: split the name into letters for the hop-in, then size it so the longer line
+  // fills the left half (on phones, the screen width).
+  const name = document.querySelector('.name');
+  const lines = [...name.querySelectorAll('.line')];
+  let i = 0;
+  lines.forEach(l => {
+    const word = l.textContent;
+    l.setAttribute('aria-hidden', 'true');
+    l.replaceChildren(...[...word].map(c => { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; s.style.setProperty('--i', i++); return s; }));
+  });
+  name.setAttribute('aria-label', lines.map(l => l.textContent).join(' '));
+  function layoutHero() {
+    const vw = document.documentElement.clientWidth;
+    const gutter = Math.max(16, Math.min(vw * .05, 72));
+    const target = vw <= 700 ? vw - 2 * gutter : vw * .56 - gutter;
+    name.style.fontSize = '100px';
+    const width = Math.max(...lines.map(l => l.getBoundingClientRect().width));
+    name.style.fontSize = Math.min(100 * target / width, 260) + 'px';
+  }
+  layoutHero();
+  document.fonts.ready.then(layoutHero);
+  addEventListener('resize', layoutHero);
+
+  // once the hop-in has finished, the letters are free for the hover effects
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const letters = [...name.querySelectorAll('.ch')];
+  if (reduce) name.classList.add('landed');
+  else letters.at(-1).addEventListener('animationend', () => { name.classList.add('landed'); clearDoodles(); }, { once: true });
+  // B: a letter jiggles when the pointer touches it
+  name.addEventListener('pointerover', e => {
+    const c = e.target.closest('.ch');
+    if (!c || root.dataset.namefx !== 'jiggle' || !name.classList.contains('landed')) return;
+    c.classList.remove('jig'); void c.offsetWidth; c.classList.add('jig');
+  });
+  name.addEventListener('animationend', e => { if (e.animationName === 'jig') e.target.classList.remove('jig'); });
+  // C: letters near the pointer lean toward it
+  const hero = document.querySelector('.hero');
+  let centres = [], leanFrame = 0;
+  hero.addEventListener('pointerenter', () => {
+    letters.forEach(c => c.style.transform = '');
+    centres = letters.map(c => { const r = c.getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2 + scrollY]; });
+  });
+  hero.addEventListener('pointermove', e => {
+    if (root.dataset.namefx !== 'lean' || reduce || !name.classList.contains('landed') || leanFrame) return;
+    leanFrame = requestAnimationFrame(() => {
+      leanFrame = 0;
+      letters.forEach((c, n) => {
+        const dx = e.clientX - centres[n][0], dy = e.clientY + scrollY - centres[n][1];
+        const pull = Math.max(0, 1 - Math.hypot(dx, dy) / 320);
+        c.style.transform = `translate(${dx * pull * .16}px, ${dy * pull * .16}px) rotate(${dx * pull * .04}deg)`;
+      });
+    });
+  });
+  hero.addEventListener('pointerleave', () => letters.forEach(c => c.style.transform = ''));
+
+  // Faint doodles never sit behind the name or a section heading: any that would is hidden
+  function clearDoodles() {
+    const pad = 16;
+    // the text itself, not the headings' full-width boxes
+    const keep = [...name.querySelectorAll('.line'), ...document.querySelectorAll('.sec-head h2')].flatMap(e => {
+      const r = document.createRange(); r.selectNodeContents(e); return [...r.getClientRects()];
+    });
+    document.querySelectorAll('.dd').forEach(d => {
+      d.style.visibility = '';
+      const r = d.getBoundingClientRect();
+      if (!r.width) return;
+      const hit = keep.some(k => r.right > k.left - pad && r.left < k.right + pad && r.bottom > k.top - pad && r.top < k.bottom + pad);
+      if (hit) d.style.visibility = 'hidden';
+    });
+  }
+  addEventListener('resize', clearDoodles);
+  document.fonts.ready.then(clearDoodles);
+
+  // Tapes: double each track so the scroll loops without a gap
+  document.querySelectorAll('.tape-track').forEach(t => t.append(...[...t.children].map(c => c.cloneNode(true))));
+
+  // Reel: switch between the two videos
+  const player = document.getElementById('player');
+  const reel = document.getElementById('reel');
+  const tabs = document.querySelectorAll('.reel-tabs button');
+  // browser controls only appear once a video has started, so the first view is just the poster
+  const start = () => { reel.classList.add('played'); player.controls = true; player.play().catch(() => {}); };
+  reel.querySelector('.reel-start').addEventListener('click', start);
+  player.addEventListener('playing', () => reel.classList.add('playing'));
+  ['pause', 'ended', 'emptied'].forEach(e => player.addEventListener(e, () => reel.classList.remove('playing')));
+  // scrolling the video out of view pauses it, which puts the badge back to "Selected"
+  new IntersectionObserver(([e]) => { if (!e.isIntersecting && !player.paused) player.pause(); }).observe(player);
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    if (tab.getAttribute('aria-selected') === 'true') return start();
+    tabs.forEach(t => t.setAttribute('aria-selected', t === tab));
+    player.pause();
+    if (root.dataset.reel === 'tv' && !reduce) {
+      const screen = player.parentElement;
+      screen.classList.add('static');
+      setTimeout(() => screen.classList.remove('static'), 420);
+    }
+    player.poster = tab.dataset.poster;
+    player.src = tab.dataset.src;
+    start();
+  }));
+
+  // Characters lightbox, captioned with the character name
+  const cards = [...document.querySelectorAll('.char button')];
+  const box = document.querySelector('.lightbox');
+  const big = box.querySelector('img'), cap = box.querySelector('p');
+  let at = 0;
+  const show = n => {
+    at = (n + cards.length) % cards.length;
+    const img = cards[at].querySelector('img');
+    big.src = img.src; big.alt = img.alt; cap.textContent = cards[at].querySelector('.char-name').textContent;
+  };
+  cards.forEach((c, n) => c.addEventListener('click', () => { show(n); box.showModal(); }));
+  box.querySelector('.prev').addEventListener('click', () => show(at - 1));
+  box.querySelector('.next').addEventListener('click', () => show(at + 1));
+  box.querySelector('.lightbox-close').addEventListener('click', () => box.close());
+  box.addEventListener('click', e => { if (e.target === box) box.close(); });
+  box.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') show(at - 1);
+    if (e.key === 'ArrowRight') show(at + 1);
+  });
+
+  // Credits: read once from the markup, then shown two ways
+  const credits = document.querySelector('.credits');
+  const rows = [...credits.children];
+  const data = [];
+  let kind = '';
+  rows.forEach(r => {
+    const c = r.classList.contains('credit') ? r : r.querySelector('.credit');
+    if (r.classList.contains('credit-keep')) kind = r.querySelector('h3').textContent;
+    data.push({ kind, title: c.querySelector('.credit-title').textContent, role: c.querySelector('.credit-role').textContent, year: c.querySelector('.credit-year').textContent });
+  });
+  const el = (tag, className, ...kids) => { const e = document.createElement(tag); if (className) e.className = className; e.append(...kids); return e; };
+
+  // A: one list with a chip per type; picking a chip pops the matching rows in
+  const ixRows = data.map(d => el('div', 'ix-row', el('span', 'ix-title', d.title), el('span', 'ix-role', d.role), el('span', 'ix-kind', d.kind), el('span', 'ix-year', d.year)));
+  ixRows.forEach((r, n) => r.dataset.kind = data[n].kind);
+  document.querySelector('.ix-rows').replaceChildren(...ixRows);
+  const kinds = ['All', ...new Set(data.map(d => d.kind))];
+  const filters = kinds.map(k => {
+    const n = k === 'All' ? data.length : data.filter(d => d.kind === k).length;
+    const b = el('button', '', k, el('sup', '', String(n)));
+    b.type = 'button';
+    b.setAttribute('aria-pressed', k === 'All');
+    b.addEventListener('click', () => {
+      filters.forEach(f => f.setAttribute('aria-pressed', f === b));
+      let shown = 0;
+      ixRows.forEach(r => {
+        r.hidden = k !== 'All' && r.dataset.kind !== k;
+        r.classList.remove('pop');
+        if (!r.hidden) { void r.offsetWidth; r.style.setProperty('--i', shown++); r.classList.add('pop'); }
+      });
+    });
+    return b;
+  });
+  document.querySelector('.ix-filters').replaceChildren(...filters);
+
+  // B: split into columns of near-equal height so every column ends on the same line.
+  // Breaks between categories are preferred; a break mid-category costs a little.
+  const colCount = () => { const w = credits.parentElement.clientWidth; return w > 980 ? 3 : w > 620 ? 2 : 1; };
+  function layoutCredits() {
+    if (root.dataset.credits !== 'columns') return;
+    const n = colCount();
+    credits.style.setProperty('--cols', n);
+    const cols = Array.from({ length: n }, () => el('div', 'credit-col'));
+    cols[0].append(...rows);
+    credits.replaceChildren(...cols);
+    if (n === 1) return;
+    const h = rows.map(r => r.offsetHeight);
+    const sum = (a, b) => h.slice(a, b).reduce((x, y) => x + y, 0);
+    const penalty = n => rows[n].classList.contains('credit-keep') ? 0 : 40;
+    let best = null;
+    const cuts = n === 2 ? rows.map((_, a) => [a]).slice(1) :
+      rows.flatMap((_, a) => rows.map((_, b) => [a, b])).filter(([a, b]) => a > 0 && b > a);
+    for (const c of cuts) {
+      const edges = [0, ...c, rows.length];
+      const tallest = Math.max(...edges.slice(1).map((e, k) => sum(edges[k], e)));
+      const score = tallest + c.reduce((t, a) => t + penalty(a), 0);
+      if (!best || score < best.score) best = { score, c };
+    }
+    const edges = [0, ...best.c, rows.length];
+    cols.forEach((col, k) => col.replaceChildren(...rows.slice(edges[k], edges[k + 1])));
+  }
+  layoutCredits();
+  let lastCols = colCount();
+  addEventListener('resize', () => { if (colCount() !== lastCols) { lastCols = colCount(); layoutCredits(); } });
+  document.fonts.ready.then(layoutCredits);
+
+  // Sparkle trail (mouse only)
+  const palette = ['#ffd23f', '#ff8fab', '#fff5f0'];
+  const pick = a => a[Math.floor(Math.random() * a.length)];
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  let lastSpark = 0;
+  addEventListener('pointermove', e => {
+    if (root.dataset.cursor !== 'sparkle' || reduce || e.pointerType !== 'mouse' || e.timeStamp - lastSpark < 40) return;
+    lastSpark = e.timeStamp;
+    const s = document.createElementNS(SVGNS, 'svg');
+    s.setAttribute('class', 'spark');
+    s.style.color = pick(palette);
+    s.style.filter = 'drop-shadow(0 0 1px #2b1214)';
+    const u = document.createElementNS(SVGNS, 'use'); u.setAttribute('href', '#d-spark'); s.append(u);
+    document.body.append(s);
+    const dx = (Math.random() - .5) * 40, dy = 14 + Math.random() * 26;
+    s.animate([
+      { transform: `translate(${e.clientX}px, ${e.clientY}px) scale(1) rotate(0)`, opacity: 1 },
+      { transform: `translate(${e.clientX + dx}px, ${e.clientY + dy}px) scale(0) rotate(160deg)`, opacity: .6 }
+    ], { duration: 700, easing: 'ease-out' }).onfinish = () => s.remove();
+  });
+
+  // Confetti from the buttons
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.pill, .email, .bookme, .copy-email');
+    if (!b || root.dataset.confetti !== 'on' || reduce) return;
+    for (let n = 0; n < 30; n++) {
+      const c = document.createElement('i');
+      c.className = 'confetti';
+      c.style.background = pick(palette);
+      if (n % 3 === 0) c.style.borderRadius = '50%';
+      document.body.append(c);
+      const a = Math.random() * Math.PI * 2, v = 80 + Math.random() * 160;
+      const x = e.clientX, y = e.clientY, vx = Math.cos(a) * v, vy = Math.sin(a) * v - 120;
+      c.animate([
+        { transform: `translate(${x}px, ${y}px) rotate(0)`, opacity: 1 },
+        { transform: `translate(${x + vx * .7}px, ${y + vy * .7}px) rotate(${360 * Math.random()}deg)`, opacity: 1, offset: .45 },
+        { transform: `translate(${x + vx}px, ${y + vy + 320}px) rotate(${720 * Math.random()}deg)`, opacity: 0 }
+      ], { duration: 1100 + Math.random() * 600, easing: 'cubic-bezier(.2, .7, .4, 1)' }).onfinish = () => c.remove();
+    }
+  });
+
+  // Scroll progress
+  const bar = document.querySelector('.progress');
+  const progress = () => bar.style.setProperty('--p', scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight));
+  addEventListener('scroll', progress, { passive: true });
+  progress();
+
+  // Book-me bubble ducks away when the footer arrives
+  const bookme = document.querySelector('.bookme');
+  new IntersectionObserver(([e]) => bookme.classList.toggle('away', e.isIntersecting)).observe(document.getElementById('contact'));
+
+  // Copy email
+  const copyBtn = document.querySelector('.copy-email');
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(document.querySelector('.email').textContent).then(() => {
+      copyBtn.textContent = 'Copied!'; copyBtn.classList.add('done');
+      setTimeout(() => { copyBtn.textContent = 'Copy'; copyBtn.classList.remove('done'); }, 1600);
+    }).catch(() => {});
+  });
+
+  // MOCKUP ONLY: options panel
+  const mock = document.querySelector('.mock'), toggle = document.querySelector('.mock-toggle');
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem('playful-opts-v3')) || {}; } catch (e) {}
+  const apply = () => document.fonts.ready.then(() => { layoutHero(); lastCols = colCount(); layoutCredits(); clearDoodles(); });
+  document.querySelectorAll('.mock select').forEach(sel => {
+    sel.value = saved[sel.dataset.opt] || root.dataset[sel.dataset.opt];
+    root.dataset[sel.dataset.opt] = sel.value;
+    sel.addEventListener('change', () => {
+      root.dataset[sel.dataset.opt] = sel.value;
+      apply();
+      saved[sel.dataset.opt] = sel.value;
+      try { localStorage.setItem('playful-opts-v3', JSON.stringify(saved)); } catch (e) {}
+    });
+  });
+  apply();
+  if (innerWidth < 600) { mock.hidden = true; toggle.hidden = false; }
+  document.querySelector('.mock-hide').addEventListener('click', () => { mock.hidden = true; toggle.hidden = false; });
+  toggle.addEventListener('click', () => { mock.hidden = false; toggle.hidden = true; });
+</script>
+</body>
+</html>
